@@ -13,4 +13,4 @@ To play the game, click [PLAY NOW!](https://www.tyogautomo.github.io/guess_numbe
 
 
 
-###                     ===============================HAPPY GUESSING===============================
+###                     ======================HAPPY GUESSING=====================
