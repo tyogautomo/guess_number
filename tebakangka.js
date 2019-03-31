@@ -51,7 +51,11 @@ while (gameOn) {
         var ngisiAngka = true;
         while (ngisiAngka) {
             var userNumber = (prompt("Guess the number from 1 to 10:"));
-            if (userNumber > 10 || userNumber < 1) {
+            if (userNumber == null) {
+                ngisiAngka = false;
+                playGame = false;
+                gameOn = false;
+            } else if (userNumber > 10 || userNumber < 1) {
                 alert("Number must be from 1 to 10");
             } else {
                 ngisiAngka = false;
@@ -62,6 +66,10 @@ while (gameOn) {
         if (compNumber == userNumber) {
             gameOn = confirm("Computer choose: " + compNumber + "\nYOU GUESS THE RIGHT NUMBER!! \nWant to try more?");
             playGame = false;
+        } else if (userNumber == null) {
+            ngisiAngka = false;
+            playGame = false;
+            gameOn = false;
         } else if (userNumber < compNumber) {
             alert("\nThe number you guessed is to low :( \nTry again!");
         } else {
